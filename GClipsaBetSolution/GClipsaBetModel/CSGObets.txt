@@ -1,0 +1,2 @@
+free:nophoto,Noname1,nophoto,Noname2:<26,[10%],[15%],[12%],nophoto,nophoto,nophoto,<26,[10%],[15%],[12%],nophoto,nophoto,nophoto,<26,[10%],[15%],[12%],nophoto,nophoto,nophoto
+limited:12345678:nophoto,Noname1,nophoto,Noname2:<26,[10%],[15%],[12%],nophoto,nophoto,nophoto,<26,[10%],[15%],[12%],nophoto,nophoto,nophoto,<26,[10%],[15%],[12%],nophoto,nophoto,nophoto:100:0
