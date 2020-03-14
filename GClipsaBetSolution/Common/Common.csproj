@@ -48,6 +48,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DictionaryKeyToValueConverter.cs" />
     <Compile Include="Grouping.cs" />
     <Compile Include="IsCanExecuteCommandConverter.cs" />
     <Compile Include="OnPropertyChangedClass.cs" />
