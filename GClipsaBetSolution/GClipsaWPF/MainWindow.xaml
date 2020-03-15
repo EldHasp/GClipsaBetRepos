@@ -6,13 +6,15 @@
             xmlns:local="clr-namespace:GClipsaWPF"
         xmlns:vm="clr-namespace:GClipsaBetViewModel;assembly=GClipsaBetViewModel"
         xmlns:model="clr-namespace:GClipsaBetModel;assembly=GClipsaBetModel"
-      mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-  <Window.DataContext>
+        xmlns:common="clr-namespace:Common;assembly=Common"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <d:Window.DataContext>
         <vm:ViewModel/>
-    </Window.DataContext>
+    </d:Window.DataContext>
     <Window.Resources>
         <!--<local:NameToImageConverter x:Key="NameToImageConverter"/>-->
+        <common:DictionaryKeyToValueConverter x:Key="DictionaryKeyToValueConverter"/>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         <DataTemplate DataType="{x:Type model:FreeMatch}">
             <Grid>
@@ -63,19 +65,19 @@
         </DataTemplate>
         <DataTemplate DataType="{x:Type model:LimitedMatch}">
             <Grid Height="40">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
                 <Image Source="{Binding Global.ImageLeft, Converter={StaticResource DictionaryKeyToValueConverter}}"/>
-                    <TextBlock Grid.Column="1" Text="{Binding Global.TeamRight}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Image Grid.Column="2" Source="Image/vs.png"/>
-                    <TextBlock Grid.Column="3" Text="{Binding Global.TeamRight}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Column="1" Text="{Binding Global.TeamRight}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Image Grid.Column="2" Source="Image/vs.png"/>
+                <TextBlock Grid.Column="3" Text="{Binding Global.TeamRight}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 <Image Grid.Column="4" Source="{Binding Global.ImageRight, Converter={StaticResource DictionaryKeyToValueConverter}}"/>
-                </Grid>
+            </Grid>
 
         </DataTemplate>
     </Window.Resources>

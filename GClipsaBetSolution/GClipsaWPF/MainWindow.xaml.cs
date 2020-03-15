@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using Common;
+using System.Collections.Generic;
+using System.Windows;
 
 namespace GClipsaWPF
 {
@@ -10,7 +12,16 @@ namespace GClipsaWPF
         public MainWindow()
         {
             InitializeComponent();
+            /// Загрузка словаря соответствия полученных названий 
+            /// рисунков их названиям в ресурсах
+            Dictionary<string, string> names = new Dictionary<string, string>()
+                {
+                    {"nophoto","Image/nophoto.png" }
+                };
+            ((DictionaryKeyToValueConverter)Resources["DictionaryKeyToValueConverter"]).SetDictionary(names);
+
         }
+
     }
 
 }

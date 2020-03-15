@@ -6,7 +6,7 @@ using System.Windows.Data;
 namespace Common
 {
     /// <summary>Конвертер преобразующий ключ в значение по словарю</summary>
-    public class DictionaryKeyToValueConverter : IMultiValueConverter, IValueConverter
+    public class DictionaryKeyToValueConverter : OnPropertyChangedClass, IMultiValueConverter, IValueConverter
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
@@ -18,7 +18,7 @@ namespace Common
             }
             else if (values.Length > 1 && (values[1] is IDictionary dictionary) && (dictionary.Contains(values[0]) == true))
             {
-                    return dictionary[values[0]];
+                return dictionary[values[0]];
             }
             return null;
         }
@@ -26,7 +26,10 @@ namespace Common
 
         public IDictionary Dictionary { get; private set; }
         public void SetDictionary(IDictionary dictionary)
-            => Dictionary = dictionary;
+        {
+            Dictionary = dictionary;
+            OnPropertyChanged(nameof(Dictionary));
+        }
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
