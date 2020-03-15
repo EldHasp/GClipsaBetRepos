@@ -8,7 +8,7 @@
         xmlns:model="clr-namespace:GClipsaBetModel;assembly=GClipsaBetModel"
         xmlns:common="clr-namespace:Common;assembly=Common"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="450" Width="800" >
     <d:Window.DataContext>
         <vm:ViewModel/>
     </d:Window.DataContext>
