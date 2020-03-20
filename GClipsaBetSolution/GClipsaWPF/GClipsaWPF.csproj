@@ -116,5 +116,10 @@
     <Resource Include="Image\nophoto.png" />
     <Resource Include="Image\vs.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="NameToImage.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

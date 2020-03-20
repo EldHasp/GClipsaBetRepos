@@ -8,13 +8,13 @@
         xmlns:model="clr-namespace:GClipsaBetModel;assembly=GClipsaBetModel"
         xmlns:common="clr-namespace:Common;assembly=Common"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" >
+        Title="MainWindow" Height="450" Width="800">
     <d:Window.DataContext>
         <vm:ViewModel/>
     </d:Window.DataContext>
     <Window.Resources>
         <!--<local:NameToImageConverter x:Key="NameToImageConverter"/>-->
-        <common:DictionaryKeyToValueConverter x:Key="DictionaryKeyToValueConverter"/>
+        <!--<common:DictionaryKeyToValueConverter x:Key="DictionaryKeyToValueConverter"/>-->
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         <DataTemplate DataType="{x:Type model:FreeMatch}">
             <Grid>
